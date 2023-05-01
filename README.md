@@ -2,7 +2,7 @@
   <img src="assets/logo.png" />
 </p>
 
-<h1 style="text-align: center;">
+<h1 align="center">
     🧅 <b>Project - "Cebulionerzy"</b> 🧅
 </h1>
 
