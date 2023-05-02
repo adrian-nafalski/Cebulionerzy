@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/game_background"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="331dp" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/navigation_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/exit_icon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginHorizontal="42sp"-->
+<!--            android:layout_marginStart="0sp"-->
+<!--            app:srcCompat="@drawable/logout" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/aid_help_icon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginHorizontal="120sp"-->
+<!--            app:srcCompat="@drawable/aid_wheel_icon" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/reward_list_icon"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:srcCompat="@drawable/award_board_icon" />-->
+<!--    </LinearLayout>-->
+
+    <fragment
+        android:id="@+id/fragment_container"
+        android:name="com.example.cebulionerzy.gameFragment.TVFragment"
+        android:layout_width="match_parent"
+        android:layout_height="350sp"
+        app:layout_constraintBottom_toTopOf="@+id/question_answer_area"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/lifebuoyFragment"-->
+<!--        android:name="com.example.cebulionerzy.gameFragment.LifebuoyFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="230sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/question_answer_area"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/navigation_bar" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/navigation_bar">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/tv_screen"-->
+<!--            android:layout_width="262dp"-->
+<!--            android:layout_height="205dp"-->
+<!--            android:layout_marginLeft="55dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/tv_kanal"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:src="@drawable/wielcy_polacy"></ImageView>-->
+<!--            &lt;!&ndash;            <pl.droidsonroids.gif.GifImageView&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:id="@+id/tv_kanal"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:src="@drawable/janusz_gif"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:scaleType="fitXY"/>&ndash;&gt;-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/tv_frame"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/tv"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/navigation_bar">-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/question_answer_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/question_board"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/pytanie"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/number_question"
+                android:layout_width="match_parent"
+                android:layout_height="43sp"
+                android:layout_marginTop="-1sp"
+                android:fontFamily="@font/gluten_regular"
+                android:gravity="center"
+                android:text="Pytanie 1 / 12"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4sp"
+                android:layout_marginTop="42sp"
+                android:layout_marginRight="6sp"
+                android:layout_marginBottom="9sp"
+                android:fontFamily="@font/gluten_regular"
+                android:gravity="center"
+                android:text="Jak nazywał się czworonożny towarzysz sierżanta Walczaka?"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/A"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/odpowiedz"
+            android:onClick="optionAClick">
+
+            <TextView
+                android:id="@+id/answer_A"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="70sp"
+                android:layout_marginTop="-1sp"
+                android:layout_marginRight="70sp"
+                android:layout_marginBottom="9sp"
+                android:fontFamily="@font/gluten_regular"
+                android:gravity="fill_vertical"
+                android:text="A:\t\tAlex"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/B"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/odpowiedz"
+            android:onClick="optionBClick">
+
+            <TextView
+                android:id="@+id/answer_B"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="70sp"
+                android:layout_marginTop="-1sp"
+                android:layout_marginRight="70sp"
+                android:layout_marginBottom="9sp"
+                android:fontFamily="@font/gluten_regular"
+                android:gravity="fill_vertical"
+                android:text="B:\t\tCywil"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/C"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/odpowiedz"
+            android:onClick="optionCClick">
+
+            <TextView
+                android:id="@+id/answer_C"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="70sp"
+                android:layout_marginTop="-1sp"
+                android:layout_marginRight="70sp"
+                android:layout_marginBottom="9sp"
+                android:fontFamily="@font/gluten_regular"
+                android:gravity="fill_vertical"
+                android:text="C:\t\tStalin"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/D"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/odpowiedz"
+            android:onClick="optionDClick">
+
+            <TextView
+                android:id="@+id/answer_D"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="70sp"
+                android:layout_marginTop="-1sp"
+                android:layout_marginRight="70sp"
+                android:layout_marginBottom="9sp"
+                android:fontFamily="@font/gluten_regular"
+                android:gravity="fill_vertical"
+                android:text="D:\t\tŁajka"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

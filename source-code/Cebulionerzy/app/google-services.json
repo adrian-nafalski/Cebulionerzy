@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "877212115740",
+    "firebase_url": "https://cebulionerzy-aplikacja-default-rtdb.firebaseio.com",
+    "project_id": "cebulionerzy-aplikacja",
+    "storage_bucket": "cebulionerzy-aplikacja.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877212115740:android:e3408db14cb0643559d0d9",
+        "android_client_info": {
+          "package_name": "com.example.cebulionerzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877212115740-5v40lu3ard9b8tgdn7fnbj9kkq92ulmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Y_KVW4ftGmy_cAQ4qyyETucvbwRSwWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877212115740-5v40lu3ard9b8tgdn7fnbj9kkq92ulmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

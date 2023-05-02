@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".gameFragment.LifebuoyFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/exit_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_icon"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/logout"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <ImageView
+                android:id="@+id/tv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/exit_icon"
+                app:layout_constraintEnd_toStartOf="@+id/aid_help_icon"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/exit_icon"
+                app:layout_constraintTop_toTopOf="@+id/exit_icon"
+                app:srcCompat="@drawable/tv_icon" />
+
+            <ImageView
+                android:id="@+id/aid_help_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_icon"
+                app:layout_constraintEnd_toStartOf="@+id/reward_list_icon"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_icon"
+                app:layout_constraintTop_toTopOf="@+id/tv_icon"
+                app:srcCompat="@drawable/aid_wheel_icon" />
+
+            <ImageView
+                android:id="@+id/reward_list_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/aid_help_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/aid_help_icon"
+                app:layout_constraintTop_toTopOf="@+id/aid_help_icon"
+                app:srcCompat="@drawable/award_board_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="370sp"
+                android:layout_height="271sp"
+                android:layout_gravity="center"
+                android:background="@drawable/board"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:layout_marginTop="-40sp"
+                    android:src="@drawable/logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="-50sp">
+
+                    <LinearLayout
+                        android:id="@+id/narod"
+                        android:layout_width="77sp"
+                        android:layout_height="40sp"
+                        android:scaleX="1.2"
+                        android:scaleY="1.2"
+                        android:layout_marginHorizontal="20sp"
+                        android:background="@drawable/narod_help_icon"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/poloweczka"
+                        android:layout_width="77sp"
+                        android:layout_height="40sp"
+                        android:scaleX="1.2"
+                        android:scaleY="1.2"
+                        android:layout_marginHorizontal="20sp"
+                        android:background="@drawable/poloweczka_help_icon"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/telefon_do_pjotera"
+                        android:layout_width="77sp"
+                        android:layout_height="40sp"
+                        android:scaleX="1.2"
+                        android:scaleY="1.2"
+                        android:layout_marginHorizontal="20sp"
+                        android:background="@drawable/phone_help_icon"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-50sp"
+                    android:layout_marginStart="45sp"
+                    android:fontFamily="@font/gluten_regular"
+                    android:gravity="center"
+                    android:text="Naród"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="90sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-19sp"
+                    android:layout_marginStart="145sp"
+                    android:fontFamily="@font/gluten_regular"
+                    android:gravity="center"
+                    android:text="Połóweczka"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="90sp"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="-19sp"
+                    android:layout_marginStart="260sp"
+                    android:fontFamily="@font/gluten_regular"
+                    android:gravity="center"
+                    android:text="Telefon do Pjotera"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
