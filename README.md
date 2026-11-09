@@ -6,10 +6,21 @@
     🧅 <b>Project - "Cebulionerzy"</b> 🧅
 </h1>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-3DDC84?logo=android&logoColor=white" alt="Platform: Android" />
+  <img src="https://img.shields.io/badge/Min%20SDK-26%20(Android%208.0)-3DDC84" alt="Min SDK 26 (Android 8.0)" />
+  <img src="https://img.shields.io/badge/Target%20SDK-32%20(Android%2012L)-3DDC84" alt="Target SDK 32 (Android 12L)" />
+  <img src="https://img.shields.io/badge/Java-8-ED8B00?logo=openjdk&logoColor=white" alt="Java 8" />
+  <img src="https://img.shields.io/badge/Gradle-7.5-02303A?logo=gradle&logoColor=white" alt="Gradle 7.5" />
+  <img src="https://img.shields.io/badge/Firebase-Firestore-FFCA28?logo=firebase&logoColor=black" alt="Firebase Firestore" />
+  <img src="https://img.shields.io/badge/Version-1.0-F38A0E" alt="Version 1.0" />
+</p>
+
 ---
 
 ## **Table of Contents** :clipboard:
 - [Project description :scroll:](#project-description-scroll)
+- [Features :video_game:](#features-video_game)
 - [Technologies :hammer:](#technologies-hammer)
 - [Conclusions :end:](#conclusions-end)
 - [Getting started :rocket:](#getting-started-rocket)
@@ -33,11 +44,22 @@ Below you can see sample screenshots from my mobile app:
   <img src="assets/screen_3.jpg" width="170" />
 </p>
 
+# Features :video_game:
+
+- 12 questions loaded from Firebase Firestore, with a top prize of 1 000 000 cebulions
+- Three lifelines: Naród (audience vote chart), Połóweczka (50:50) and Telefon do Pjotera (phone a friend)
+- Retro TV with switchable animated channels
+- Award board showing the current progress
+- Background music that can be turned off in the options
+- Layouts that adapt to different phone screen sizes
+
 # Technologies :hammer:
 
 - Java
 - Android Studio
 - Firebase
+- MPAndroidChart
+- android-gif-drawable
 - Git
 - Figma
 - GIMP
@@ -48,7 +70,7 @@ During the labs I had the opportunity to learn about the Android SDK and become 
 
 # Getting started :rocket:
 
-Requirements: Android Studio, Android SDK 32 and JDK 11 or 17 (the project uses Gradle 7.3.3, which does not run on newer JDKs).
+Requirements: Android Studio, Android SDK 32 and JDK 11 or 17 (the project uses Gradle 7.5, which does not run on newer JDKs).
 
 ```bash
 git clone https://github.com/adrian-nafalski/Cebulionerzy.git
