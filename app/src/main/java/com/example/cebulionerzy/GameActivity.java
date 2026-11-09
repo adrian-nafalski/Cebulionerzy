@@ -257,4 +257,16 @@ public class GameActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MainActivity.resumeMainTheme();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MainActivity.pauseMainTheme();
+    }
 }

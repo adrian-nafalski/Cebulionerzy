@@ -163,4 +163,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    public static void pauseMainTheme() {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.pause();
+        }
+    }
+
+    public static void resumeMainTheme() {
+        if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
+            mediaPlayer.start();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        resumeMainTheme();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        pauseMainTheme();
+    }
 }
