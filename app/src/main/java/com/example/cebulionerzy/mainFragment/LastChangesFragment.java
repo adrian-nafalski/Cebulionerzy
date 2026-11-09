@@ -23,6 +23,8 @@ public class LastChangesFragment extends DialogFragment {
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         View v = inflater.inflate(R.layout.fragment_last_changes, container, false);
 
+        v.findViewById(R.id.close_button).setOnClickListener(view -> dismiss());
+
         return v;
     }
 }
