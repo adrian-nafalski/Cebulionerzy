@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.cebulionerzy.GameActivity;
 import com.example.cebulionerzy.MainActivity;
 import com.example.cebulionerzy.R;
 import com.example.cebulionerzy.gameFragment.lifebuoyFragments.HalvesFragment;
@@ -93,7 +94,8 @@ public class LifebuoyFragment extends Fragment {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
-                if(!HALVES_USED) {
+                // koło nie przepada, jeżeli gracz zaznaczył już odpowiedź
+                if(!HALVES_USED && ((GameActivity) requireActivity()).useHalves()) {
                     HALVES_USED = true;
                     HalvesFragment halvesFragment = new HalvesFragment();
                     halvesFragment.show(getActivity().getSupportFragmentManager(),"HalvesFragment");

@@ -76,6 +76,12 @@ public class GameActivity extends AppCompatActivity {
     private void setAllData() {
         clickedAnswer = false;
 
+        // przywrócenie odpowiedzi wyłączonych przez Połóweczkę w poprzednim pytaniu
+        A.setClickable(true);
+        B.setClickable(true);
+        C.setClickable(true);
+        D.setClickable(true);
+
         question.setText(quizModelClass.getQuestion());
         number_question.setText("Pytanie " + (index + 1) + " / 12");
         answer_A.setText("A:\t\t" + quizModelClass.getoA());
@@ -86,6 +92,35 @@ public class GameActivity extends AppCompatActivity {
         // wysyłanie indexu pytania do AwardBoardFragment, PhoneFragment i NationFragment
         ItemVievModel itemVievModel = new ViewModelProvider(GameActivity.this).get(ItemVievModel.class);
         itemVievModel.setData(index);
+    }
+
+    /**
+     * Koło ratunkowe 50 : 50 - wymazuje dwie losowe złe odpowiedzi.
+     *
+     * @return false, jeżeli gracz zaznaczył już odpowiedź i koła nie można użyć
+     */
+    public boolean useHalves() {
+        if(clickedAnswer) {
+            return false;
+        }
+
+        LinearLayout[] containers = {A, B, C, D};
+        TextView[] texts = {answer_A, answer_B, answer_C, answer_D};
+        String[] options = {quizModelClass.getoA(), quizModelClass.getoB(), quizModelClass.getoC(), quizModelClass.getoD()};
+
+        List<Integer> wrongAnswers = new ArrayList<>();
+        for(int i = 0; i < options.length; i++) {
+            if(!options[i].equals(quizModelClass.getAns())) {
+                wrongAnswers.add(i);
+            }
+        }
+        Collections.shuffle(wrongAnswers);
+
+        for(int i : wrongAnswers.subList(0, Math.min(2, wrongAnswers.size()))) {
+            texts[i].setText("");
+            containers[i].setClickable(false);
+        }
+        return true;
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
