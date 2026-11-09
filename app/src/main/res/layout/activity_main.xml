@@ -24,15 +24,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/info_change_list" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="350dp"
-        android:gravity="center"
-        android:orientation="vertical"
+    <com.example.cebulionerzy.ScaleToFitLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+    <LinearLayout
+        android:layout_width="198dp"
+        android:layout_height="296dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/button_play"
@@ -109,6 +114,7 @@
                 android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
+    </com.example.cebulionerzy.ScaleToFitLayout>
 
     <ImageView
         android:id="@+id/imageView"

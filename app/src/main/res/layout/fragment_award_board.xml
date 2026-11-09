@@ -66,23 +66,21 @@
                 app:srcCompat="@drawable/award_board_icon" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <com.example.cebulionerzy.ScaleToFitLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="370sp"
-                android:layout_height="271sp"
-                android:layout_gravity="center"
+                android:layout_width="370dp"
+                android:layout_height="271dp"
                 android:background="@drawable/board" >
 
                 <LinearLayout
-                    android:layout_width="150sp"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="20sp"
-                    android:layout_marginTop="20sp"
-                    android:layout_marginBottom="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -94,7 +92,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_11"
@@ -105,7 +104,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_10"
@@ -116,7 +116,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_9"
@@ -127,7 +128,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_8"
@@ -138,7 +140,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_7"
@@ -149,7 +152,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_6"
@@ -160,7 +164,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_5"
@@ -171,7 +176,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_4"
@@ -182,7 +188,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_3"
@@ -193,7 +200,8 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_2"
@@ -204,26 +212,28 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/award_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="1\t\t\t\t\t\t\t\t\t\t\t\t2 cbl"
+                        android:text="1\t\t\t\t\t\t\t\t\t\t\t2 cbl"
                         android:gravity="right"
                         android:textColor="@color/white"
                         android:fontFamily="@font/gluten_regular"
                         android:shadowColor="@color/black"
-                        android:shadowRadius="20" />
+                        android:shadowRadius="20"
+                        android:textSize="14dp" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/x_cbl"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="120sp"
-                    android:layout_marginStart="25sp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="25dp"
                     android:rotation="10"
                     android:text="X"
                     android:textColor="@color/white"
@@ -234,13 +244,13 @@
                     android:id="@+id/cybulka"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="80sp"
-                    android:layout_marginRight="15sp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="15dp"
                     android:rotation="20"
                     android:src="@drawable/cebulka" />
 
             </LinearLayout>
-        </LinearLayout>
+        </com.example.cebulionerzy.ScaleToFitLayout>
 
     </LinearLayout>
 

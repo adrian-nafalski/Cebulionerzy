@@ -65,49 +65,43 @@
                 app:srcCompat="@drawable/award_board_icon" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tv_screen"
-            android:layout_width="262sp"
-            android:layout_height="205sp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="35dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <pl.droidsonroids.gif.GifImageView
-                android:id="@+id/tv_kanal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/janusz_gif" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tv_frame"
-            android:layout_width="400sp"
-            android:layout_height="300sp"
-            android:background="@drawable/tv"
+        <com.example.cebulionerzy.ScaleToFitLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/navigation_bar">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <FrameLayout
+                android:layout_width="400dp"
+                android:layout_height="300dp">
 
-        <LinearLayout
-            android:id="@+id/next_channel_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="35dp"
-            android:background="@drawable/next_channel_button"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_frame"
-            app:layout_constraintEnd_toEndOf="@+id/tv_frame"
-            app:layout_constraintStart_toEndOf="@+id/tv_screen"
-            app:layout_constraintTop_toBottomOf="@+id/navigation_bar" />
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/tv_kanal"
+                    android:layout_width="262dp"
+                    android:layout_height="205dp"
+                    android:layout_marginStart="51.5dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/janusz_gif" />
+
+                <View
+                    android:id="@+id/tv_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tv" />
+
+                <LinearLayout
+                    android:id="@+id/next_channel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="320dp"
+                    android:layout_marginTop="185dp"
+                    android:background="@drawable/next_channel_button"
+                    android:orientation="horizontal" />
+            </FrameLayout>
+        </com.example.cebulionerzy.ScaleToFitLayout>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
