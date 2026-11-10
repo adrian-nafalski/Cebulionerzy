@@ -25,6 +25,9 @@ captures/
 *.jks
 *.keystore
 
+# Firebase configuration (contains the API key)
+google-services.json
+
 # Logs
 *.log
 
